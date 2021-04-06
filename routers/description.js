@@ -5,13 +5,13 @@ const router = require('express').Router();
 
 // router for requests to description service
 router.route('/description/:productId')
-  .get(asyncHandler(forwardingController('remote', 'local')))
-  .put(asyncHandler(forwardingController('remote', 'local')))
-  .delete(asyncHandler(forwardingController('remote', 'local')));
+  .get(asyncHandler(forwardingController('DESCRIPTION', 4004)))
+  .put(asyncHandler(forwardingController('DESCRIPTION', 4004)))
+  .delete(asyncHandler(forwardingController('DESCRIPTION', 4004)));
 router.route('/descriptions/new')
-  .post(asyncHandler(forwardingController('remote', 'local')));
+  .post(asyncHandler(forwardingController('DESCRIPTION', 4004)));
 
 router.route('/descriptions/multiple')
-  .get(asyncHandler(forwardingController('remote', 'local')));
+  .get(asyncHandler(forwardingController('DESCRIPTION', 4004)));
 
 module.exports = router;

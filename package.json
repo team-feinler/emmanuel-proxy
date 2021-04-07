@@ -8,9 +8,10 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "node server/index.js"
+    "start": "nodemon server/index.js"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
